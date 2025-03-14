@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #282f29;
+        }
+        .card {
+            width: 90%;
+            max-width: 470px;
+            background: linear-gradient(135deg, #00feba, #5b548a);
+            color: #fff;
+            margin: 100px auto 0;
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+            position: relative;
+        }
+        .search {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .search input {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            color: #555;
+            padding: 15px 20px;
+            height: 50px;
+            border-radius: 30px;
+            flex: 1;
+            margin-right: 16px;
+            font-size: 18px;
+        }
+        .search button {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .search button img {
+            width: 22px;
+            height: 22px;
+        }
+        .suggestions {
+            position: absolute;
+            top: 55px;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            display: none;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 10;
+        }
+        .suggestions div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+        .suggestions div:hover {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter a City name" onkeyup="showSuggestions()" autocomplete="off">
+            <button onclick="handleSearch()"><img src="search_icon.png" alt="Search"></button>
+        </div>
+        <div class="suggestions" id="suggestionsBox"></div>
+        <div class="weather">
+            <img src="weather.webp" class="weather-icon" alt="Weather Icon">
+            <h1 class="temp">--°C</h1>
+            <h2 class="city">City</h2>
+        </div>
+        <div class="details">
+            <div>
+                <img class="humidity-icon" src="humidity.png" alt="Humidity Icon">
+                <p class="humidity">--% Humidity</p>
+            </div>
+            <div>
+                <img class="wind-icon" src="wind.png" alt="Wind Speed Icon">
+                <p class="wind">-- km/h</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = "29a32a6aa8c2384909977083436f031d"; 
+        const apiBaseURL = "https://api.openweathermap.org/data/2.5/weather";
+        
+        // Preloaded city list (You can fetch this from an API if needed)
+        const cityList = ["Karachi", "Lahore", "Islamabad", "New York", "London", "Tokyo", "Paris", "Mumbai", "Sydney", "Dubai", "Berlin", "Moscow", "Toronto"];
+
+        function showSuggestions() {
+            let input = document.getElementById("cityInput").value.toLowerCase();
+            let suggestionsBox = document.getElementById("suggestionsBox");
+
+            if (input.length === 0) {
+                suggestionsBox.style.display = "none";
+                return;
+            }
+
+            let filteredCities = cityList.filter(city => city.toLowerCase().startsWith(input));
+            if (filteredCities.length === 0) {
+                suggestionsBox.style.display = "none";
+                return;
+            }
+
+            suggestionsBox.innerHTML = "";
+            filteredCities.forEach(city => {
+                let div = document.createElement("div");
+                div.textContent = city;
+                div.onclick = function() {
+                    document.getElementById("cityInput").value = city;
+                    suggestionsBox.style.display = "none";
+                };
+                suggestionsBox.appendChild(div);
+            });
+
+            suggestionsBox.style.display = "block";
+        }
+
+        async function getWeather(city) {
+            const apiURL = `${apiBaseURL}?q=${city}&appid=${apiKey}&units=metric`;
+            const response = await fetch(apiURL);
+            
+            if (!response.ok) {
+                throw new Error(`Weather data not found for ${city}`);
+            }
+            
+            return await response.json();
+        }
+
+        async function displayWeather(city) {
+            try {
+                const result = await getWeather(city);
+
+                const weatherIcon = result.weather[0].icon;
+                const weatherIconURL = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+                const temp = result.main.temp;
+                const cityName = result.name;
+                const humidity = result.main.humidity;
+                const wind = result.wind.speed;
+
+                document.querySelector(".weather-icon").setAttribute("src", weatherIconURL);
+                document.querySelector(".temp").textContent = `${temp}°C`;
+                document.querySelector(".city").textContent = cityName;
+                document.querySelector(".humidity").textContent = `${humidity}% Humidity`;
+                document.querySelector(".wind").textContent = `${wind} km/h`;
+
+                document.getElementById("suggestionsBox").style.display = "none";
+
+            } catch (error) {
+                console.error(error);
+                alert("City not found. Please enter a valid city name.");
+            }
+        }
+
+        function handleSearch() {
+            const city = document.getElementById("cityInput").value;
+            if (city) {
+                displayWeather(city);
+            } else {
+                alert("Please enter a city name.");
+            }
+        }
+    </script>
+
+</body>
+</html>
