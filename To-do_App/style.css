@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #4527a0, #8e24aa);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    letter-spacing: 4px;
+}
+
+.theme-toggle {
+    float: right;
+    cursor: pointer;
+    margin-top: -25px;
+}
+
+.todo-input input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    background: #1e1e1e;
+    color: white;
+    font-size: 16px;
+}
+
+.todo-list {
+    background: #2e2e2e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.todo-item input {
+    margin-right: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+    background: #2e2e2e;
+    border-radius: 5px;
+}
+
+.filters span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.filters .active {
+    color: #8e24aa;
+}
+
+.clear {
+    cursor: pointer;
+    color: #ff5252;
+}
+
+.drag-text {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
