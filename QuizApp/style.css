@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d16ba5, #86a8e7, #5ffbf1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 1px;
+}
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#start {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+#start:hover {
+    background-color: #2575fc;
+}
+
+.quiz {
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#choices button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+#choices button:hover {
+    background-color: black;
+    color: white;
+}
+
+#next {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#next:hover {
+    background-color: #2575fc;
+}

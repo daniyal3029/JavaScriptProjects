@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .correct {
+            background-color: lightgreen;
+        }
+
+        .wrong {
+            background-color: lightcoral;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #submit {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Quiz
+            <button id="start" onclick="startQuiz()">Start</button>
+        </h1>
+        <p>Test your knowledge</p>
+        <hr>
+        <div class="quiz" style="display: none;">
+            <div id="question"></div>
+            <div id="choices"></div>
+            <div id="submit">
+                <button id="next" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+        <div id="result" style="display: none;"></div>
+    </div>
+</body>
+
+<script>
+    let currentQuestion = 0;
+    let score = 0;
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
+
+    const questions = [
+        {
+            question: 'What is the Capital of Germany?',
+            choices: ['Berlin', 'Munich', 'Hamburg', 'Frankfurt'],
+            correctAnswer: 0
+        },
+        {
+            question: 'What is the size of int in C++?',
+            choices: ['2', '4', '8', 'Depends on the system'],
+            correctAnswer: 3
+        },
+        {
+            question: 'What is the name of Prime Minister of Pakistan?',
+            choices: ['Imran Khan', 'Nawaz Sharif', 'Asif Zardari', 'Shahbaz Sharif'],
+            correctAnswer: 3
+        },
+        {
+            question: 'What is the name of the President of USA?',
+            choices: ['Donald Trump', 'Joe Biden', 'Barack Obama', 'George Bush'],
+            correctAnswer: 1
+        },
+        {
+            question: 'What is the name of the President of Russia?',
+            choices: ['Vladimir Putin', 'Dmitry Medvedev', 'Boris Yeltsin', 'Mikhail Gorbachev'],
+            correctAnswer: 0
+        }
+    ];
+
+    function startQuiz() {
+        document.querySelector(".quiz").style.display = "block";
+        document.getElementById("start").style.display = "none";
+        showQuiz();
+    }
+
+    function checkAnswer(i) {
+        const buttons = document.querySelectorAll("#choices button");
+
+        buttons.forEach((btn, index) => {
+            if (index === questions[currentQuestion].correctAnswer) {
+                btn.classList.add('correct');
+                btn.style.backgroundColor = 'green';
+                btn.style.color = 'white';
+
+            }
+            if (i === index && i !== questions[currentQuestion].correctAnswer) {
+                btn.classList.add('wrong');
+                btn.style.backgroundColor = 'red';
+                btn.style.color = 'white';
+            }
+            btn.disabled = true; 
+        });
+
+        if (i === questions[currentQuestion].correctAnswer) {
+            score++;
+            correctAnswers++;
+        } else {
+            wrongAnswers++;
+        }
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            showQuiz();
+        } else {
+            showResult();
+        }
+    }
+
+    function showQuiz() {
+        let q = questions[currentQuestion];
+        document.getElementById("question").innerHTML = q.question;
+
+        const choicesHtml = q.choices.map((choice, i) =>
+            `<button onclick="checkAnswer(${i})">${choice}</button>`
+        ).join("");
+
+        document.getElementById("choices").innerHTML = choicesHtml;
+    }
+
+    function showResult() {
+        document.querySelector(".quiz").style.display = "none";
+        document.getElementById("result").style.display = "block";
+
+        document.getElementById("result").innerHTML = `
+            <h2>Quiz Completed!</h2>
+            <p>Score: ${score} / ${questions.length}</p>
+            <p>Correct Answers: ${correctAnswers}</p>
+            <p>Wrong Answers: ${wrongAnswers}</p>
+        `;
+    }
+</script>
+
+</html>
