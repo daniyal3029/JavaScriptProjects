@@ -5,6 +5,7 @@
 * [Introduction](#introduction)
 * [Getting Started](#getting-started)
 * [Projects](#projects)
+* [Contributing](#contributing)
 
 ## Introduction
 This repository contains a collection of JavaScript projects, each with its own unique features and challenges.
@@ -17,3 +18,6 @@ The following projects are currently included in this repository:
 * QuizApp
 * To-do_App
 * WeatherApp
+
+## Contributing
+If you'd like to contribute to this repository, please fork the project, make your changes, and submit a pull request. We appreciate any contributions, whether it's a bug fix, a new feature, or simply improving the documentation.
