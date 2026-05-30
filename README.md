@@ -15,9 +15,9 @@ To get started, simply clone this repository and open the project you'd like to 
 
 ## Projects
 The following projects are currently included in this repository:
-* QuizApp
-* To-do_App
-* WeatherApp
+* QuizApp: A quiz application that tests your knowledge.
+* To-do_App: A to-do list application that helps you stay organized.
+* WeatherApp: A weather application that displays the current weather.
 
 ## Contributing
 If you'd like to contribute to this repository, please fork the project, make your changes, and submit a pull request. We appreciate any contributions, whether it's a bug fix, a new feature, or simply improving the documentation.
