@@ -21,3 +21,8 @@ The following projects are currently included in this repository:
 
 ## Contributing
 If you'd like to contribute to this repository, please fork the project, make your changes, and submit a pull request. We appreciate any contributions, whether it's a bug fix, a new feature, or simply improving the documentation.
+
+## Badges
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/daniyal3029/JavaScriptProjects)](https://github.com/daniyal3029/JavaScriptProjects/issues)
+[![GitHub forks](https://img.shields.io/github/forks/daniyal3029/JavaScriptProjects)](https://github.com/daniyal3029/JavaScriptProjects/network)
