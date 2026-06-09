@@ -6,6 +6,7 @@
 * [Getting Started](#getting-started)
 * [Projects](#projects)
 * [Contributing](#contributing)
+* [License](#license)
 
 ## Introduction
 This repository contains a collection of JavaScript projects, each with its own unique features and challenges.
@@ -21,6 +22,9 @@ The following projects are currently included in this repository:
 
 ## Contributing
 If you'd like to contribute to this repository, please fork the project, make your changes, and submit a pull request. We appreciate any contributions, whether it's a bug fix, a new feature, or simply improving the documentation.
+
+## License
+This repository is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
