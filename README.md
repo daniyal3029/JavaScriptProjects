@@ -30,3 +30,7 @@ This repository is licensed under the [MIT License](https://opensource.org/licen
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/daniyal3029/JavaScriptProjects)](https://github.com/daniyal3029/JavaScriptProjects/issues)
 [![GitHub forks](https://img.shields.io/github/forks/daniyal3029/JavaScriptProjects)](https://github.com/daniyal3029/JavaScriptProjects/network)
+
+## Usage Examples
+* Clone the repository: `git clone https://github.com/daniyal3029/JavaScriptProjects.git`
+* Open a project in your code editor and start coding!
