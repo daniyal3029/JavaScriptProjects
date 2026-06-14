@@ -7,6 +7,7 @@
 * [Projects](#projects)
 * [Contributing](#contributing)
 * [License](#license)
+* [Acknowledgments](#acknowledgments)
 
 ## Introduction
 This repository contains a collection of JavaScript projects, each with its own unique features and challenges.
@@ -34,3 +35,6 @@ This repository is licensed under the [MIT License](https://opensource.org/licen
 ## Usage Examples
 * Clone the repository: `git clone https://github.com/daniyal3029/JavaScriptProjects.git`
 * Open a project in your code editor and start coding!
+
+## Acknowledgments
+Special thanks to the open-source community for their contributions and support.
