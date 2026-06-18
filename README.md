@@ -38,3 +38,10 @@ This repository is licensed under the [MIT License](https://opensource.org/licen
 
 ## Acknowledgments
 Special thanks to the open-source community for their contributions and support.
+
+## Contributing Guidelines
+Before contributing, please ensure you have:
+* Read and understood the [MIT License](https://opensource.org/licenses/MIT).
+* Forked the repository and made your changes.
+* Tested your changes to ensure they do not break existing functionality.
+* Submitted a pull request with a clear description of your changes.
