@@ -45,3 +45,6 @@ Before contributing, please ensure you have:
 * Forked the repository and made your changes.
 * Tested your changes to ensure they do not break existing functionality.
 * Submitted a pull request with a clear description of your changes.
+
+## Code of Conduct
+This project adheres to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By participating, you are expected to uphold this code.
