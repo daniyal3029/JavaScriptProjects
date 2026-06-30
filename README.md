@@ -8,6 +8,11 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Acknowledgments](#acknowledgments)
+* [Badges](#badges)
+* [Usage Examples](#usage-examples)
+* [Contributing Guidelines](#contributing-guidelines)
+* [Code of Conduct](#code-of-conduct)
+* [Project Structure](#project-structure)
 
 ## Introduction
 This repository contains a collection of JavaScript projects, each with its own unique features and challenges.
@@ -48,3 +53,9 @@ Before contributing, please ensure you have:
 
 ## Code of Conduct
 This project adheres to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By participating, you are expected to uphold this code.
+
+## Project Structure
+The repository is organized into the following directories:
+* `QuizApp`: A quiz application that tests your knowledge.
+* `To-do_App`: A to-do list application that helps you stay organized.
+* `WeatherApp`: A weather application that displays the current weather.
