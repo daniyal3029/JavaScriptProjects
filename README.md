@@ -59,3 +59,8 @@ The repository is organized into the following directories:
 * `QuizApp`: A quiz application that tests your knowledge.
 * `To-do_App`: A to-do list application that helps you stay organized.
 * `WeatherApp`: A weather application that displays the current weather.
+
+## Getting Help
+If you have any questions or need help with a project, you can:
+* Open an issue on the GitHub repository
+* Ask a question on Stack Overflow using the `javascript` and `js30` tags
