@@ -61,7 +61,4 @@ The repository is organized into the following directories:
 * `WeatherApp`: A weather application that displays the current weather.
 
 ## Getting Help
-If you have any questions or need help with a project, you can:
-* Open an issue on the GitHub repository
-* Reach out to the maintainer on GitHub
-* Join the discussion on the GitHub repository
+If you have any questions or need help with a project, please don't hesitate to reach out to the community or open an issue on GitHub.
