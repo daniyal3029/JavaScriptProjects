@@ -61,4 +61,6 @@ The repository is organized into the following directories:
 * `WeatherApp`: A weather application that displays the current weather.
 
 ## Getting Help
-If you have any questions or need help with a project, please don't hesitate to reach out to the community or open an issue on GitHub.
+If you have any questions, issues, or need further assistance, you can:
+* Open an issue on the [GitHub issues page](https://github.com/daniyal3029/JavaScriptProjects/issues).
+* Contact the repository owner directly.
