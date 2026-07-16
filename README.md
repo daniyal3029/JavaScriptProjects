@@ -60,7 +60,8 @@ The repository is organized into the following directories:
 * `To-do_App`: A to-do list application that helps you stay organized.
 * `WeatherApp`: A weather application that displays the current weather.
 
-## Getting Help
-If you have any questions, issues, or need further assistance, you can:
-* Open an issue on the [GitHub issues page](https://github.com/daniyal3029/JavaScriptProjects/issues).
-* Contact the repository owner directly.
+## Installation
+To run the projects, you will need to have a code editor and a basic understanding of HTML, CSS, and JavaScript.
+
+## Known Issues
+Please report any issues you encounter to the [issue tracker](https://github.com/daniyal3029/JavaScriptProjects/issues).
