@@ -61,7 +61,4 @@ The repository is organized into the following directories:
 * `WeatherApp`: A weather application that displays the current weather.
 
 ## Installation
-To run the projects, you will need to have a code editor and a basic understanding of HTML, CSS, and JavaScript.
-
-## Known Issues
-Please report any issues you encounter to the [issue tracker](https://github.com/daniyal3029/JavaScriptProjects/issues).
+To install the required dependencies for each project, run `npm install` in the respective project directory.
