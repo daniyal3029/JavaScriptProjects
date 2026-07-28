@@ -61,4 +61,4 @@ The repository is organized into the following directories:
 * `WeatherApp`: A weather application that displays the current weather.
 
 ## Installation
-To install the required dependencies for each project, run `npm install` in the respective project directory.
+To run the projects, make sure you have a code editor installed and a basic understanding of HTML, CSS, and JavaScript. Clone the repository and open the project you'd like to work on in your code editor.
