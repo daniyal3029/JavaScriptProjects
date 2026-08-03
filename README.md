@@ -60,5 +60,5 @@ The repository is organized into the following directories:
 * `To-do_App`: A to-do list application that helps you stay organized.
 * `WeatherApp`: A weather application that displays the current weather.
 
-## Installation
-To install the required dependencies, run `npm install` in the root directory of each project.
+## Known Issues
+Please report any issues you encounter to the [issue tracker](https://github.com/daniyal3029/JavaScriptProjects/issues).
