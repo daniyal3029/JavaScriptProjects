@@ -61,4 +61,5 @@ The repository is organized into the following directories:
 * `WeatherApp`: A weather application that displays the current weather.
 
 ## Known Issues
-Please note that this repository is still under development and may contain bugs or issues. If you encounter any problems, please submit an issue on the GitHub issues page.
+* The To-do_App has a known issue with the drag and drop functionality not working as expected in certain browsers.
+* The WeatherApp has a known issue with the API request not being handled properly in case of network errors.
